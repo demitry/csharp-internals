@@ -153,9 +153,38 @@ hello.exe
 
 Hello, Pluralsight!
 
-
-
-
 **ILSpy**
 
+Download Debugging tools for Windows (SDKSETUP.EXE)
 
+**Inspecting runtime state**
+- state of C# Program
+- data structures of the runtime (CLR)
+
+**VS debugger** 
+- stepping
+- conrtrolling
+- expression evaluation (Watch, Immediate)
+
+**Native code debugger**
+- Debugging tools for Windows downloading
+- WinDbg.exe and cdb.exe
+- SOS, PSSCOR4, SOSEX, CLRMD debugger extention
+
+**Ex:**
+```
+cdb.exe hello.exe
+sxe clrjit; g
+.loaddby sos clr 
+!bpmd hello.exe Program.Main
+g
+```
+
+**WinDbg**
+```
+File->Open Executable (Ctrl+E)
+sxe ld clrjit
+g
+!help
+???
+```
