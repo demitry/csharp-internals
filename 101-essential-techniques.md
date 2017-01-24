@@ -50,3 +50,28 @@ ildasm.exe hello.exe
 
 **ILSpy**
 
+ilasm /exe hello.il
+
+Microsoft (R) .NET Framework IL Assembler.  Version 4.6.1586.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+Assembling 'hello.il'  to EXE --> 'hello.exe'
+Source file is ANSI
+
+Assembled method HelloWorld.Hello::Main
+Assembled method HelloWorld.Hello::.ctor
+Creating PE file
+
+Emitting classes:
+Class 1:        HelloWorld.Hello
+
+Emitting fields and methods:
+Global
+Class 1 Methods: 2;
+
+Emitting events and properties:
+Global
+Class 1
+Writing PE file
+Operation completed successfully
+
+
