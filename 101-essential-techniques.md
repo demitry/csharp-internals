@@ -48,8 +48,7 @@ ildasm.exe hello.exe
 } // end of method Program::.ctor
 ```
 
-**ILSpy**
-
+```
 ilasm /exe hello.il
 
 Microsoft (R) .NET Framework IL Assembler.  Version 4.6.1586.0
@@ -73,5 +72,33 @@ Global
 Class 1
 Writing PE file
 Operation completed successfully
+```
 
+**VS debugger** 
+- stepping
+- conrtrolling
+- expression evaluation (Watch, Immediate)
 
+**Native code debugger**
+- Debugging tools for Windows downloading
+- WinDbg.exe and cdb.exe
+- SOS, PSSCOR4, SOSEX, CLRMD debugger extention
+
+**Ex:**
+```
+cdb.exe hello.exe
+sxe clrjit; g
+.loaddby sos clr 
+!bpmd hello.exe Program.Main
+g
+```
+
+**WinDbg**
+```
+File->Open Executable (Ctrl+E)
+sxe ld clrjit
+g
+!help
+???
+```
+**ILSpy**
